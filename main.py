@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from ConversorDeMoedas import Ui_MainWindow
+from Conversor import Ui_MainWindow
 
 class Main(QMainWindow):
     def __init__(self):
