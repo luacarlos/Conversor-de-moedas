@@ -7,12 +7,12 @@ class Main(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.pushButton_converter.clicked.connect(self.Conversao)
+        self.ui.pushButton_Converter.clicked.connect(self.Conversao)
 
     def Conversao(self):
-        num = int(self.ui.lineEdit_inicial.text())
-        moeda_atual = self.ui.comboBox_conversor.currentText()
-        moeda_converter = self.ui.comboBox_converter.currentText()
+        num = int(self.ui.lineEdit_entrada.text())
+        moeda_atual = self.ui.comboBox_3.currentText()
+        moeda_converter = self.ui.comboBox_4.currentText()
 
         conversao = 0
 
@@ -87,13 +87,13 @@ class Main(QMainWindow):
                 conversao = num * 0.0049
 
 
-
-        if moeda_converter == moeda_atual:
-            self.ui.label_resultado.setText("As moedas selecionadas são iguais")
-        elif conversao is not None:
-            self.ui.label_resultado.setText(f'A conversão de {num} de {moeda_atual} para {moeda_converter} é (ou aproximadamente): {simbolo} {conversao:.2f}')
-        else:
-            self.ui.label_resultado.setText("Conversão inválida ou não suportada.")
+        self.ui.label_saida.setText(f"{simbolo} {conversao}")
+        # if moeda_converter == moeda_atual:
+        #     self.ui.label_resultado.setText("As moedas selecionadas são iguais")
+        # elif conversao is not None:
+        #     self.ui.label_resultado.setText(f'A conversão de {num} de {moeda_atual} para {moeda_converter} é (ou aproximadamente): {simbolo} {conversao:.2f}')
+        # else:
+        #     self.ui.label_resultado.setText("Conversão inválida ou não suportada.")
 
 
 if __name__ == "__main__":
