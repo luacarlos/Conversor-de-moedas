@@ -56,7 +56,7 @@
       <string>⇌</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="pushButton_Converter">
      <property name="geometry">
       <rect>
        <x>240</x>
@@ -147,23 +147,10 @@
       </property>
      </item>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="lineEdit_entrada">
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>60</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:2px solid black; border-radius:4px 10px;</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
        <y>60</y>
        <width>151</width>
        <height>31</height>
@@ -247,6 +234,22 @@
        <string>ARS</string>
       </property>
      </item>
+    </widget>
+    <widget class="QLabel" name="label_saida">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>60</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid black; border-radius:4px 10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
    </widget>
    <widget class="QLabel" name="label">
