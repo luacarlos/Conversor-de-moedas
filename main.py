@@ -7,89 +7,100 @@ class Main(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.pushButton_Converter.clicked.connect(self.Conversao)
+        
+        self.ui.pushButton_Trocar.clicked.connect(self.Trocar)
+        # self.ui.pushButton_Converter.clicked.connect(self.Conversao)
 
-    def Conversao(self):
-        num = int(self.ui.lineEdit_entrada.text())
-        moeda_atual = self.ui.comboBox_3.currentText()
-        moeda_converter = self.ui.comboBox_4.currentText()
+    def Trocar(self):
+        self.ui.comboBox_Valor.setItemText(0, 'EUR')
+        self.ui.comboBox_Valor.setItemText(2, 'BRL')
 
-        conversao = 0
-
-        if moeda_atual == "USD":
-            if moeda_converter == "EUR":
-                simbolo = "€"
-                conversao = num * 0.87805
-            elif moeda_converter == "JPY":
-                simbolo = "¥"
-                conversao = num * 142.32
-            elif moeda_converter == "BRL":
-                simbolo = "R$"
-                conversao = num * 5.63315
-            elif moeda_converter == "ARS":
-                simbolo = "AR$"
-                conversao = num * 1175.00
-
-        elif moeda_atual == "EUR":
-            if moeda_converter == "USD":
-                simbolo = "$"
-                conversao = num * 1.1372
-            elif moeda_converter == "JPY":
-                simbolo = "¥"
-                conversao = num * 163.32
-            elif moeda_converter == "BRL":
-                simbolo = "R$"
-                conversao = num * 6.19915
-            elif moeda_converter == "ARS":
-                simbolo = "AR$"
-                conversao = num * 1343.36
-
-        elif moeda_atual == "JPY":
-            if moeda_converter == "USD":
-                simbolo = "$"
-                conversao = num * 0.00696
-            elif moeda_converter == "EUR":
-                simbolo = "€"
-                conversao = num * 0.00612
-            elif moeda_converter == "BRL":
-                simbolo = "R$"
-                conversao = num * 0.03978
-            elif moeda_converter == "ARS":
-                simbolo = "AR$"
-                conversao = num * 8.11376
-
-        elif moeda_atual == "BRL":
-            if moeda_converter == "USD":
-                simbolo = "$"
-                conversao = num * 0.17685
-            elif moeda_converter == "EUR":
-                simbolo = "€"
-                conversao = num * 0.1613
-            elif moeda_converter == "JPY":
-                simbolo = "¥"
-                conversao = num * 25.13
-            elif moeda_converter == "ARS":
-                simbolo = "AR$"
-                conversao = num * 204.00
-
-        elif moeda_atual == "ARS":
-            if moeda_converter == "USD":
-                simbolo = "$"
-                conversao = num * 0.00085
-            elif moeda_converter == "EUR":
-                simbolo = "€"
-                conversao = num * 0.00075
-            elif moeda_converter == "JPY":
-                simbolo = "¥"
-                conversao = num * 0.1232
-            elif moeda_converter == "BRL":
-                simbolo = "R$"
-                conversao = num * 0.0049
+        
 
 
-        self.ui.label_saida.setText(f"{simbolo} {conversao}")
-        # if moeda_converter == moeda_atual:
-        #     self.ui.label_resultado.setText("As moedas selecionadas são iguais")
+    # def Conversao(self):
+    #     num = int(self.ui.lineEdit_entrada.text())
+    #     moeda_atual = self.ui.comboBox_3.currentText()
+    #     moeda_converter = self.ui.comboBox_4.currentText()
+
+    #     conversao = 0
+
+    #     if moeda_atual == "USD":
+    #         if moeda_converter == "EUR":
+    #             simbolo = "€"
+    #             conversao = num * 0.87805
+    #         elif moeda_converter == "JPY":
+    #             simbolo = "¥"
+    #             conversao = num * 142.32
+    #         elif moeda_converter == "BRL":
+    #             simbolo = "R$"
+    #             conversao = num * 5.63315
+    #         elif moeda_converter == "ARS":
+    #             simbolo = "AR$"
+    #             conversao = num * 1175.00
+
+    #     elif moeda_atual == "EUR":
+    #         if moeda_converter == "USD":
+    #             simbolo = "$"
+    #             conversao = num * 1.1372
+    #         elif moeda_converter == "JPY":
+    #             simbolo = "¥"
+    #             conversao = num * 163.32
+    #         elif moeda_converter == "BRL":
+    #             simbolo = "R$"
+    #             conversao = num * 6.19915
+    #         elif moeda_converter == "ARS":
+    #             simbolo = "AR$"
+    #             conversao = num * 1343.36
+
+    #     elif moeda_atual == "JPY":
+    #         if moeda_converter == "USD":
+    #             simbolo = "$"
+    #             conversao = num * 0.00696
+    #         elif moeda_converter == "EUR":
+    #             simbolo = "€"
+    #             conversao = num * 0.00612
+    #         elif moeda_converter == "BRL":
+    #             simbolo = "R$"
+    #             conversao = num * 0.03978
+    #         elif moeda_converter == "ARS":
+    #             simbolo = "AR$"
+    #             conversao = num * 8.11376
+
+    #     elif moeda_atual == "BRL":
+    #         if moeda_converter == "USD":
+    #             simbolo = "$"
+    #             conversao = num * 0.17685
+    #         elif moeda_converter == "EUR":
+    #             simbolo = "€"
+    #             conversao = num * 0.1613
+    #         elif moeda_converter == "JPY":
+    #             simbolo = "¥"
+    #             conversao = num * 25.13
+    #         elif moeda_converter == "ARS":
+    #             simbolo = "AR$"
+    #             conversao = num * 204.00
+
+    #     elif moeda_atual == "ARS":
+    #         if moeda_converter == "USD":
+    #             simbolo = "$"
+    #             conversao = num * 0.00085
+    #         elif moeda_converter == "EUR":
+    #             simbolo = "€"
+    #             conversao = num * 0.00075
+    #         elif moeda_converter == "JPY":
+    #             simbolo = "¥"
+    #             conversao = num * 0.1232
+    #         elif moeda_converter == "BRL":
+    #             simbolo = "R$"
+    #             conversao = num * 0.0049
+
+
+    #     self.ui.label_res.setText(f"A conversão de ({moeda_atual} {num}) para ({moeda_converter}) é aproximadamente: {simbolo} {conversao:.2f}")
+    #     self.ui.label_saida.setText(f"{simbolo}{conversao:.2f}")
+
+    #     if moeda_converter == moeda_atual:
+    #         self.ui.label_res.setText("As moedas selecionadas são iguais")
         # elif conversao is not None:
         #     self.ui.label_resultado.setText(f'A conversão de {num} de {moeda_atual} para {moeda_converter} é (ou aproximadamente): {simbolo} {conversao:.2f}')
         # else:

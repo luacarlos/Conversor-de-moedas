@@ -20,7 +20,7 @@
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="widget_Conversor" native="true">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -32,7 +32,7 @@
     <property name="styleSheet">
      <string notr="true">background-color: white; border-radius:20px;</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButton_Trocar">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -60,9 +60,9 @@
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>150</y>
-       <width>93</width>
-       <height>28</height>
+       <y>140</y>
+       <width>101</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -70,22 +70,6 @@
      </property>
      <property name="text">
       <string>Converter</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>180</x>
-       <y>60</y>
-       <width>71</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:2px solid black; border-radius:10px;</string>
-     </property>
-     <property name="text">
-      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -109,57 +93,6 @@
       <string>Valor</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_3">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>70</y>
-       <width>51</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <item>
-      <property name="text">
-       <string>BRL</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>USD</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>EUR</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>JPY</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>ARS</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_entrada">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>60</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:2px solid black; border-radius:4px 10px;</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
@@ -181,29 +114,45 @@
       <string>Conversão</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="label_saida">
      <property name="geometry">
       <rect>
-       <x>470</x>
+       <x>330</x>
        <y>60</y>
-       <width>71</width>
-       <height>31</height>
+       <width>151</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border:2px solid black; border-radius:10px;</string>
+      <string notr="true">border:2px solid black; border-radius:4px 10px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_4">
+    <widget class="QLabel" name="label_saida_2">
      <property name="geometry">
       <rect>
-       <x>480</x>
+       <x>30</x>
+       <y>60</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid black; border-radius:4px 10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_5">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
        <y>66</y>
        <width>51</width>
-       <height>20</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -235,24 +184,116 @@
       </property>
      </item>
     </widget>
-    <widget class="QLabel" name="label_saida">
+    <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>330</x>
+       <x>170</x>
        <y>60</y>
-       <width>151</width>
-       <height>31</height>
+       <width>71</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border:2px solid black; border-radius:4px 10px;</string>
+      <string notr="true">border:2px solid black; border-radius:10px;</string>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
+    <widget class="QComboBox" name="comboBox_Valor">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>70</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <item>
+      <property name="text">
+       <string>BRL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>USD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EUR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>JPY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ARS</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>60</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid black; border-radius:10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Conversao">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>70</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <item>
+      <property name="text">
+       <string>BRL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>USD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EUR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>JPY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ARS</string>
+      </property>
+     </item>
+    </widget>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="Titulo">
     <property name="geometry">
      <rect>
       <x>150</x>
