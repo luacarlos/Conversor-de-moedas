@@ -55,7 +55,7 @@ class Main(QMainWindow):
                 valor = float(valor_format)
 
                 conversao = 0
-                
+                    
                 if moeda_Valor == "USD":
                     if moeda_Conversao == "EUR":
                         simbolo = "€"

@@ -107,7 +107,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_carteiraUsd">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -127,10 +127,10 @@
      <string notr="true"> background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>USD: $0,00</string>
+     <string>USD: $0.00</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="label_carteiraEur">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -150,10 +150,10 @@
      <string notr="true"> background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>EUR: €0,00</string>
+     <string>EUR: €0.00</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="label_carteiraJpy">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -173,10 +173,10 @@
      <string notr="true"> background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>JPY: ¥0,00</string>
+     <string>JPY: ¥0.00</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="label_carteiraArs">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -196,7 +196,7 @@
      <string notr="true"> background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>ARS: AR$0,00</string>
+     <string>ARS: AR$0.00</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -258,7 +258,7 @@
      <string notr="true"> background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>JPY ➝ BRL:  R$0,39</string>
+     <string>JPY ➝ BRL:  R$0,04</string>
     </property>
    </widget>
    <widget class="QLabel" name="Titulo_cotacaoAtual">
@@ -519,10 +519,10 @@
    <zorder>Titulo_saldo</zorder>
    <zorder>label</zorder>
    <zorder>Titulo_carteira</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_4</zorder>
-   <zorder>label_5</zorder>
+   <zorder>label_carteiraUsd</zorder>
+   <zorder>label_carteiraEur</zorder>
+   <zorder>label_carteiraJpy</zorder>
+   <zorder>label_carteiraArs</zorder>
    <zorder>label_6</zorder>
    <zorder>label_cotacaoArs</zorder>
    <zorder>label_cotacaoJpy</zorder>
