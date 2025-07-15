@@ -516,6 +516,35 @@
      <string notr="true">border-radius: 5px; border: 1.5px solid black; padding: 10px;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_alterar_tema">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none; border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>assets/dark.png</normaloff>assets/dark.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>70</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
    <zorder>Titulo_saldo</zorder>
    <zorder>label</zorder>
    <zorder>Titulo_carteira</zorder>
@@ -537,6 +566,7 @@
    <zorder>label_acao</zorder>
    <zorder>lineEdit_comprar_vendaMoeda</zorder>
    <zorder>comprar_vendaMoeda</zorder>
+   <zorder>pushButton_alterar_tema</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
