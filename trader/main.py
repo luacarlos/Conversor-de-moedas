@@ -28,10 +28,20 @@ class Main(QMainWindow):
                 else:
                     valor_format+=i
                 count+=1
-            valor = float(valor_format)
-        else:
-            valor = float(self.ui.lineEdit_comprar_vendaMoeda.text())
+            try:
+                valor = float(valor_format)
+            except Exception as e:
+                print("Erro",e)
+                self.ui.label_acao.setText("Não é possível comprar este valor")
+                return 
 
+        else:
+            try:
+                valor = float(self.ui.lineEdit_comprar_vendaMoeda.text())
+            except Exception as e:
+                print("Erro",e)
+                self.ui.label_acao.setText("Não é possível comprar este valor")
+                return
         
         if ',' in saldo:
             count=0
@@ -45,7 +55,7 @@ class Main(QMainWindow):
             saldo = float(saldo_format)
         else:
             saldo = float(self.ui.Titulo_saldo.text()[15:])
-
+    
         if saldo <= 0:
             self.ui.label_acao.setText("Você não possui saldo suficiente para comprar outra moeda")
 
@@ -101,11 +111,22 @@ class Main(QMainWindow):
                 else:
                     valor_format+=i
                 count+=1
-            valor = float(valor_format)
+            try:
+                valor = float(valor_format)
+            except Exception as e:
+                print("Erro",e)
+                self.ui.label_acao.setText("Não é possível vender este valor")
+                return 
         else:
-            valor = float(self.ui.lineEdit_comprar_vendaMoeda.text())
+            try:
+                valor = float(valor_format)
+            except Exception as e:
+                print("Erro",e)
+                self.ui.label_acao.setText("Não é possível vender este valor")
+                return 
 
         
+
         if ',' in saldo:
             count=0
             saldo_format=''
